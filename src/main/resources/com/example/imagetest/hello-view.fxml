@@ -13,12 +13,12 @@
     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
   </padding>
 
-  <Label fx:id="welcomeText" />
+  <Label fx:id="textImg" />
    <ImageView fx:id="imageView" fitHeight="261.0" fitWidth="573.0" pickOnBounds="true" preserveRatio="true" />
    <AnchorPane prefHeight="116.0" prefWidth="408.0">
       <children>
-         <Button layoutX="384.0" layoutY="10.0" mnemonicParsing="false" onAction="#onNextClick" text="Дальше" />
-         <Button layoutX="228.0" layoutY="11.0" mnemonicParsing="false" onAction="#onLastClick" text="Назад" />
+         <Button fx:id="next" layoutX="384.0" layoutY="10.0" mnemonicParsing="false" onAction="#onNextClick" text="Дальше" />
+         <Button fx:id="preview" layoutX="228.0" layoutY="11.0" mnemonicParsing="false" onAction="#onLastClick" text="Назад" />
          <Button layoutX="395.0" layoutY="74.0" mnemonicParsing="false" onAction="#onStopClick" prefHeight="15.0" prefWidth="30.0">
             <graphic>
                <ImageView fitHeight="19.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">

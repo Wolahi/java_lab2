@@ -5,6 +5,7 @@ import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -13,8 +14,16 @@ import javafx.util.Duration;
 public class HelloController {
     @FXML
     private ImageView imageView;
+
     @FXML
-    private Label welcomeText;
+    private Label textImg;
+
+    @FXML
+    private Button next;
+
+    @FXML
+    private Button preview;
+
     Timeline timer = new Timeline();
     ConcreteAggregate foto = new ConcreteAggregate("src/main/resources/");
 
@@ -29,28 +38,29 @@ public class HelloController {
         timer.getKeyFrames().add(new KeyFrame(Duration.seconds(delay), new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                if (iterator.hasNext()) imageView.setImage(iterator.next());
-                else imageView.setImage(iterator.firstImage());
+                onNextClick();
             }
         }));
         timer.play();
     }
     @FXML
     public void onLastClick(){
-        if (iterator.hasPreview()) imageView.setImage(iterator.preview());
-        else imageView.setImage(iterator.lastImage());
+        if (iterator.hasPreview()) {
+            imageView.setImage(iterator.preview());
+            textImg.setText(iterator.getPathImg());
+        }
     }
     @FXML
     public void onNextClick(){
-        if (iterator.hasNext()) imageView.setImage(iterator.next());
-        else imageView.setImage(iterator.firstImage());
+        if (iterator.hasNext()) {
+            imageView.setImage(iterator.next());
+            textImg.setText(iterator.getPathImg());
+        }
     }
     @FXML
     public void onStopClick(){
         timer.stop();
         timer.getKeyFrames().clear();
     }
-
-
 
 }
