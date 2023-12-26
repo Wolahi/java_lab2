@@ -6,7 +6,7 @@
 
   **Скриншот рабочего окна приложения:**
   ----------------------------------------
-![image](https://raw.githubusercontent.com/Wolahi/java_lab2/master/target/classes/1.png)
+![image](https://raw.githubusercontent.com/Wolahi/java_lab2/master/src/main/resources/screenshot/scren.png)
 
 
 **Разбор части кода на примере класса HelloController**
@@ -57,7 +57,7 @@
 Плохой дизайн
 
 ## Получение справочной информации
-По всем вопрсам можно обратиться в [телеграм](https://t.me/YaSimpleDimple) разработчика
+По всем вопрсам можно обратиться в [телеграм](https://t.me/Wolahi) разработчика
 
 ## Приглашение к сотрудничеству
 В дальнейшем предполагается передаботка действующего дизайна интерфейса
